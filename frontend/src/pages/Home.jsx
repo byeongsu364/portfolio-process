@@ -1,11 +1,10 @@
 import React from 'react'
-import Aboutme from "../components/home/Aboutme"
-import Contact from "../components/home/Contact"
-import Footer from "../components/home/Footer"
-import Header from "../components/home/Header"
-import Hero from "../components/home/Hero"
-import Work from "../components/home/Work"
-
+import Hero from '../components/home/Hero'
+import Aboutme from '../components/home/Aboutme'
+import Header from '../components/home/Header'
+import Work from '../components/home/Work'
+import Contact from '../components/home/Contact'
+import Footer from '../components/home/Footer'
 const Home = () => {
     return (
         <div>
@@ -14,13 +13,13 @@ const Home = () => {
                 <section id='Hero'>
                     <Hero />
                 </section>
-                <section id='Aboutme'>
+                <section id="Aboutme">
                     <Aboutme />
                 </section>
-                <section id='Work'>
+                <section id="Work">
                     <Work />
                 </section>
-                <section id='Contact'>
+                <section id="Contact">
                     <Contact />
                 </section>
             </main>

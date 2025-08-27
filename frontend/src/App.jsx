@@ -9,7 +9,7 @@ import AuthRedirectRoute from './routes/AuthRedirectRoute'
 import RequireAuth from './routes/RequireAuth';
 import "./styles/main.scss"
 import "./styles/_themes.scss"
-import "./styles/common.scss"
+import './styles/common.scss'
 function App() {
 
   return (
