@@ -1,0 +1,87 @@
+.aboutme {
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+
+    .profile {
+      flex: 1;
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+          color: #555;
+        }
+      }
+    }
+
+    .title {
+      flex: 1;
+      text-align: right;
+      position: relative;
+
+      .star {
+        display: block;
+        font-size: 6rem;
+        color: #000;
+        animation: rotate 6s linear infinite;
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        color: var(--primary);
+      }
+    }
+  }
+
+  .menus {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 0 2rem;
+
+    .menu {
+      flex: 1;
+      padding: 0 1rem;
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+          color: #555;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
