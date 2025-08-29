@@ -1,87 +1,50 @@
-.aboutme {
-  .inner {
+.aboutme-inner {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 4rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
 
-    .profile {
-      flex: 1;
-      h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        line-height: 1.5;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-          font-size: 0.9rem;
-          margin-bottom: 0.5rem;
-          color: #555;
+    h1.tit {
+        align-self: flex-end;
+        transform: translateX(11vw);
+        position: relative;
+
+        .star-span {
+            position: absolute;
+            left: -10rem;
+            top: -10rem;
         }
-      }
     }
 
-    .title {
-      flex: 1;
-      text-align: right;
-      position: relative;
+    .about-container {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        margin-top: 5.3rem;
 
-      .star {
-        display: block;
-        font-size: 6rem;
-        color: #000;
-        animation: rotate 6s linear infinite;
-      }
+        .in-wrap {
+            flex: 1;
 
-      h1 {
-        font-size: 4rem;
-        font-weight: 900;
-        color: var(--primary);
-      }
-    }
-  }
+            .lst {
+                >li {
+                    line-height: 2;
+                    padding: .5rem 1rem 0;
+                    font-size: 1.4rem;
 
-  .menus {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding: 0 2rem;
-
-    .menu {
-      flex: 1;
-      padding: 0 1rem;
-      h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-          font-size: 0.9rem;
-          margin-bottom: 0.4rem;
-          color: #555;
+                    >strong {
+                        display: inline-block;
+                        padding: 0 1rem 0 0;
+                    }
+                    &:nth-child(even){
+                        background-color: var(--gray100);
+                    }
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--bg);
+                        cursor: pointer;
+                    }
+                }
+            }
         }
-      }
     }
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

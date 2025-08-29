@@ -1,0 +1,91 @@
+.works-inner {
+    padding: 4rem 0;
+    background: var(--bg);
+    color: var(--text);
+
+    .tit {
+        text-align: center;
+        font-family: "Noto Sans KR", sans-serif;
+        letter-spacing: -0.02em;
+        margin-bottom: 8rem;
+        color: var(--text);
+    }
+
+    .works-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .work-card {
+            display: flex;
+            align-items: stretch;
+            background: var(--gray400);
+            border-radius: 12px;
+            overflow: hidden;
+
+            .t-wrap {
+                flex: 1;
+                padding: 2rem;
+                text-decoration: none;
+                color: var(--text);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .list-lst {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400; // Regular
+                    font-size: 3.375rem; // 54px
+                    line-height: 1.2;
+                    margin-bottom: 0.8rem;
+                    color: var(--text);
+                }
+
+                .txt {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 200; // ExtraLight
+                    font-size: 1rem; // 16px
+                    line-height: 1.5;
+                    color: var(--gray600);
+                    margin-bottom: 1.2rem;
+                }
+
+                .hash-wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+
+                    .hash {
+                        font-size: 0.75rem;
+                        padding: 0.35rem 0.8rem;
+                        border-radius: 20px;
+                        background: var(--text); // pill 배경은 현재 텍스트 색
+                        color: var(--bg); // 반전
+                        font-weight: 600;
+                        transition: background 0.3s ease, color 0.3s ease;
+
+                        &:hover {
+                            background: var(--primary);
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            .img-wrap {
+                flex: 0 0 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--gray200);
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+        }
+    }
+}
