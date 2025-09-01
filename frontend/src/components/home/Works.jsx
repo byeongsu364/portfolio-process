@@ -1,56 +1,34 @@
-import React from "react";
-import { works } from "../../utils/works.js";
-import "./styles/Works.scss";
-import p1 from "../home/img/p-1.png";
-import p2 from "../home/img/p-2.png";
-import p3 from "../home/img/p-3.png";
-
-const imageMap = {
-  "p-1.png": p1,
-  "p-2.png": p2,
-  "p-3.png": p3,
-};
-
-const Work = () => {
+import React from 'react'
+import works from '../../utils/works'
+import "./styles/Works.scss"
+const Works = () => {
   return (
-    <div className="inner works-inner">
-      <h1 className="tit">Works.</h1>
-
-      <div className="works-container">
-        {works.map((item) => (
-          <div key={item.id} className="in-wrap work-card">
-            <a
-              href={item.links.demo}
-              className="t-wrap"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h4 className="list-lst">{item.title}</h4>
-              <p className="txt">{item.subtitle}</p>
-              <div className="hash-wrap">
-                {item.tags.map((tag, idx) => (
-                  <span key={idx} className="hash">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
+    <div className='inner work-inner'>
+      <h2 className='sub-tit-2'>works.</h2>
+      <ul className="work-lst">
+        {works.map((work)=>(
+          <li key={work.id}>
+            <a href={work.links.notion} className='lst-t-wrap'>
+            <h4 className="lst-tit">
+              {work.title}
+            </h4>
+            <div className="tags">
+              {work.tags.map((t,i)=>(
+                <span key={i}>{t}</span>
+              ))}
+            </div>
             </a>
-            <a
-              href={item.links.demo}
-              className="img-wrap"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={imageMap[item.thumbnail.split("/").pop()]}
-                alt={item.title}
-              />
+            <a href={work.links.demo} className="lst-img-wrap">
+              <div 
+              className="bg"
+              style={{backgroundImage:`url(${work.thumbnail})`}}
+              ></div>
             </a>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Work;
+export default Works
