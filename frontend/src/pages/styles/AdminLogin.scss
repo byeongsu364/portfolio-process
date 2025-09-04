@@ -4,12 +4,13 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    // gap: 5rem;
 
     .login-header {
         text-align: center;
         margin-bottom: 2rem;
 
-        h3{
+        h3 {
             font-size: 2rem;
             margin-bottom: .5rem;
             color: #333;
@@ -26,30 +27,27 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         padding: 2rem;
         border-radius: .8rem;
-
-        .form-field {
+        .form-field{
             margin-bottom: 1.5rem;
             display: flex;
             flex-direction: column;
-
+            
             lable {
                 font-size: 1.2rem;
-                color: #444;
+                color:#444
             }
-
             input {
-                padding: 0.8rem 1rem;
+                padding:0.8rem 1rem;
                 border: 1px solid #ccc;
-                border-radius:  .4rem;
+                border-radius: .4rem;
                 font-size: 1.4rem;
-                
+
                 &:focus {
                     outline: none;
-                    border-color: salmon;
+                    border-color: rgb(250, 42, 191);
                 }
             }
         }
-
         button {
             width: 100%;
             background-color: #007bff;
@@ -57,9 +55,8 @@
             border-radius: .4rem;
             color: #fff;
             transition: background .2s;
-
-            &:hover {
-                background-color: #0162ca;
+            &:hover{
+                background-color: #1862b0;
             }
         }
     }

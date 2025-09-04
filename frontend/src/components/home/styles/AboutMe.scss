@@ -9,7 +9,7 @@
         transform: translateX(11vw);
         position: relative;
 
-        .star-span {
+        .star-spin {
             position: absolute;
             left: -10rem;
             top: -10rem;
@@ -23,6 +23,7 @@
         margin-top: 5.3rem;
 
         .in-wrap {
+            // width: 25%;
             flex: 1;
 
             .lst {
@@ -33,18 +34,20 @@
 
                     >strong {
                         display: inline-block;
-                        padding: 0 1rem 0 0;
+                        padding: 0 3rem 0 0;
                     }
-                    &:nth-child(even){
+
+                    &:nth-child(even) {
                         background-color: var(--gray100);
                     }
                     &:hover {
                         background-color: var(--primary);
                         color: var(--bg);
-                        cursor: pointer;
                     }
+
                 }
             }
         }
+
     }
 }

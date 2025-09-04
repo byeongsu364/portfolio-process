@@ -1,9 +1,11 @@
+// src/data/aboutMe.js
+
 const aboutMe = {
   basic: {
-    name: "김병수",
-    age: 25,
-    location: "구리, 대한민국",
-    mbti: "ENFP",
+    name: "홍길동",
+    age: 29,
+    location: "서울, 대한민국",
+    mbti: "INTJ",
   },
   skills: [
     "JavaScript (ES6+)",
