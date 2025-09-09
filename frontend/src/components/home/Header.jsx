@@ -2,42 +2,51 @@ import React, { useEffect, useState } from 'react'
 import Nav from "./Nav"
 import "./styles/Header.scss"
 import { useTheme } from '../../context/ThemeContext'
-import { FaThumbsUp } from "react-icons/fa";
-
+import FixedTop from './FixedTop'
 const Header = () => {
   const { theme, toggleTheme } = useTheme()
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen]=useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      if (window.scrollY > 50) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
     }
     handleScroll()
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    window.addEventListener('scroll',handleScroll)
+
   }, [])
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
-  }
+  useEffect(()=>{
+    const onKey =(e)=> e.key=='Escape' && setMenuOpen(false)
+
+    document.addEventListener('keydown',onKey)
+    return ()=>document.removeEventListener('keydown',onKey)
+  },[])
 
   return (
-    <header className={`${scrolled ? "scroll" : ""}`}>
+    <header className={`${scrolled? "scroll":"" } ${menuOpen? "is-open":""} ` }>
       <div className="inner">
         <h4>LOGO</h4>
         <div className="right-wrap">
+          <button 
+          onClick={()=>setMenuOpen(v=>!v)}
+          className='mob-nav-btn'>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </button>
           <Nav />
           <button className='btn' onClick={toggleTheme}>{theme}</button>
+
         </div>
       </div>
-
-      {/* 👍 위로가기 버튼 */}
-      <div className="fixed-top" onClick={scrollToTop}>
-        <FaThumbsUp size={28} />
-      </div>
+      <FixedTop/>
     </header>
   )
 }
