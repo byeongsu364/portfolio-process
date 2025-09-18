@@ -3,6 +3,7 @@ section {
     z-index: 0;
     min-height: 100vh;
     background-color: var(--bg);
+    overflow: hidden;
 
     // overflow: hidden;
     &#Work {
@@ -39,9 +40,13 @@ section {
 
         margin: auto;
 
+        @media screen and (max-width:1599px) {
+            padding: 1rem 2rem;
+        }
+
         .btn {
             background-color: var(--primary);
-            color: var(--bg);
+            color: var(--neutral-900);
             border: 0;
             padding: .6rem 1rem;
             cursor: pointer;
@@ -133,6 +138,7 @@ span.star-spin {
     transform-origin: 50% 50%;
     animation: rotate 3s infinite alternate;
     position: relative;
+    // left: 50%;
 
     i.star {
         position: absolute;
