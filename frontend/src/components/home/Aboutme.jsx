@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles/AboutMe.scss"
-import aboutMe from '../../utils/Aboutme'
+import aboutMe from '../../utils/aboutme'
 
 const Aboutme = () => {
   const profile = aboutMe.basic
