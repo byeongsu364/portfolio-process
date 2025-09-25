@@ -14,10 +14,10 @@ const Footer = () => {
           </p>
         </div>
         <div className="right">
-          <a href="#">
+          <a href="https://github.com/byeongsu364/portfolio-process">
             <FaGithub size={28} />
           </a>
-          <a href="#">
+          <a href="https://www.notion.so/25c803a2c33780cdabe9f654711c628a?v=25c803a2c33780329235000ca3de5998&source=copy_link">
             <SiNotion size={28} />
           </a>
         </div>
